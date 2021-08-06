@@ -3,6 +3,7 @@ import streamlit as st
 import main
 import detail
 
+
 PAGES = {
     "Home Page": main,
     "Detail": detail
