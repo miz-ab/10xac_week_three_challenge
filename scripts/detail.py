@@ -24,7 +24,7 @@ def load_data():
 
     df_store_type = df_train_store.groupby(by="StoreType").count().Store.reset_index()
 
-    #num = st.slider("Select number of Rankings", 0, 50, 21)
+
     title = f"Top Ranking By Number of tweets"
     barChart(df_store_type, title, "original_author", "Tweet_count")
 
