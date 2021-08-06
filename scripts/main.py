@@ -7,8 +7,6 @@ def load_data():
 
     df_new_train = df_train.drop(['Open','Promo','StateHoliday','SchoolHoliday'], axis=1)
     df_new_store = df_store.drop(['CompetitionOpenSinceMonth','CompetitionOpenSinceYear','Promo2','Promo2SinceWeek','Promo2SinceYear','PromoInterval'], axis=1)
-    # Left-join the train to the store dataset since .Why?
-    # Because you want to make sure you have all events even if some of them don't have their store information ( which shouldn't happen)
     df_train_store = pd.merge(df_new_train, df_new_store, how='left', on='Store')
     st.write(df_train_store)
 
